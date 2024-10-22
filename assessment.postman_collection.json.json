@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "c51e74c2-1890-4934-a767-edd3a8307c95",
+		"name": "assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"santosh.sahu@yopmail.com\",\r\n    \"password\" : \"9594188195\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"santosh.sahu@yopmail.com\",\r\n    \"password\" : \"9594188195\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wallet/enable-wallet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzE3OWMwNDJjMGQ1MzE5ZDA0MzYzMjYiLCJpYXQiOjE3Mjk2MDIyMDYsImV4cCI6MTcyOTYwMjI2Nn0.lfQ6ccvRTqTTkZ7PbnkTlB-DICTE67ShWlc7p0btGFY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/wallet/enable-wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"wallet",
+						"enable-wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wallet/balance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzE3YTVlOTcwZGMxZGQ0ZmMzNGNlYzYiLCJpYXQiOjE3Mjk2MDMwNTAsImV4cCI6MTcyOTYwNjY1MH0.MOpyPntbzOOMiI51KtYX_c_v1UKHvpAJxtEsI6E_Wu4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/wallet/balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"wallet",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wallet/update-balance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzE3YWZiYjEzMTExMDRiYzU0MjE3MzUiLCJpYXQiOjE3Mjk2MDU1NjMsImV4cCI6MTcyOTYwOTE2M30.xgOdZaCmB5-yHBE2LZ_78gS7EmRBhCt1Dzi6fZFyC1Q",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\" : 1000,\r\n    \"type\" : \"credit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/wallet/update-balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"wallet",
+						"update-balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
